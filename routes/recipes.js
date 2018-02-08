@@ -69,7 +69,7 @@ router.get('/recipes', (req, res, next) => {
     const id = req.params.id
     Recipe.findById(id).remove()
 
-    .then((recipe) => res.json ('successfully deleted'))
+    .then((removed) => res.json ('successfully deleted'))
     .catch((error) => next(error))
 
   })
